@@ -11,7 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{645D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaService", "PizzaService\PizzaService.csproj", "{BFA2EDCD-7257-43B4-9331-5233A7A4A20A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService", "OrderService\OrderService.csproj", "{664A9EE2-5369-40B3-8DBE-5A86605316A5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gateway", "Gateway\Gateway.csproj", "{9448362E-6D95-4128-8A4E-0D8D017043F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationService", "AuthenticationService\AuthenticationService.csproj", "{57467F47-A45A-4CAB-B9AC-08BB67CAB7EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,17 +25,22 @@ Global
 		{BFA2EDCD-7257-43B4-9331-5233A7A4A20A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFA2EDCD-7257-43B4-9331-5233A7A4A20A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFA2EDCD-7257-43B4-9331-5233A7A4A20A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{664A9EE2-5369-40B3-8DBE-5A86605316A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{664A9EE2-5369-40B3-8DBE-5A86605316A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{664A9EE2-5369-40B3-8DBE-5A86605316A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{664A9EE2-5369-40B3-8DBE-5A86605316A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9448362E-6D95-4128-8A4E-0D8D017043F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9448362E-6D95-4128-8A4E-0D8D017043F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9448362E-6D95-4128-8A4E-0D8D017043F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9448362E-6D95-4128-8A4E-0D8D017043F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57467F47-A45A-4CAB-B9AC-08BB67CAB7EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57467F47-A45A-4CAB-B9AC-08BB67CAB7EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57467F47-A45A-4CAB-B9AC-08BB67CAB7EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57467F47-A45A-4CAB-B9AC-08BB67CAB7EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BFA2EDCD-7257-43B4-9331-5233A7A4A20A} = {B9111D13-0D43-4B3E-B97C-DA102C3B2958}
-		{664A9EE2-5369-40B3-8DBE-5A86605316A5} = {D6E893EE-566F-4F95-B2E2-E1EA6A0AEF41}
+		{9448362E-6D95-4128-8A4E-0D8D017043F0} = {645D8E8B-55B3-4C12-B13B-9B1C6BF65D8F}
+		{57467F47-A45A-4CAB-B9AC-08BB67CAB7EE} = {645D8E8B-55B3-4C12-B13B-9B1C6BF65D8F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {33D8B05C-30EB-4885-8E96-018DF1E4369F}
