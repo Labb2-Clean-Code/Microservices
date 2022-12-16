@@ -1,13 +1,12 @@
-﻿using PizzaService.Interfaces;
-using PizzaService.Models;
+﻿using PizzaService.Models;
 using PizzaService.UnifOfWork;
 
 namespace PizzaService.Services
 {
-    public class PizzaService : IPizzaService
+    public class PizzaServices : IPizzaService
     {
         public IUnitOfWork _unitOfWork { get; set; }
-        public PizzaService(IUnitOfWork unitOfWork)
+        public PizzaServices(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }

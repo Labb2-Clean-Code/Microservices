@@ -12,7 +12,7 @@ namespace PizzaService.UnifOfWork
             _dataContext = dataContext;
             Pizzas = new PizzaRepository(_dataContext);
         }
-        public IPizzaRepository Pizzas { get; set; }
+        public IPizzaRepository Pizzas { get; private set; }
         public int Complete()
         {
             return _dataContext.SaveChanges();

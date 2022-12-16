@@ -10,18 +10,18 @@ namespace PizzaService.Data
         public DbSet<Pizza> Pizzas { get; set; }
         public DataContext(DbContextOptions options) : base(options)
         {
-            try
-            {
-                if (Database.GetService<IDatabaseCreator>() is RelationalDatabaseCreator databaseCreator)
-                {
-                    if (!databaseCreator.CanConnect()) databaseCreator.Create();
-                    if (!databaseCreator.HasTables()) databaseCreator.CreateTables();
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
+            //try
+            //{
+            //    if (Database.GetService<IDatabaseCreator>() is RelationalDatabaseCreator databaseCreator)
+            //    {
+            //        if (!databaseCreator.CanConnect()) databaseCreator.Create();
+            //        if (!databaseCreator.HasTables()) databaseCreator.CreateTables();
+            //    }
+            //}
+            //catch (Exception e)
+            //{
+            //    Console.WriteLine(e.Message);
+            //}
 
         }
     }

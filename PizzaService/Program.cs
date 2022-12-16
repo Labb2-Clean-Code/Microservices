@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using PizzaService.Data;
+using PizzaService.Interfaces;
+using PizzaService.Repositories;
+using PizzaService.Services;
 using PizzaService.UnifOfWork;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,7 +18,9 @@ builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlServer(connectionString);
 });
 
-builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+//builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
+//builder.Services.AddTransient<IPizzaService, PizzaServices>();
+builder.Services.AddTransient<IPizzaRepository, PizzaRepository>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

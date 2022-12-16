@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using PizzaService.Interfaces;
 using PizzaService.Models;
+using PizzaService.UnifOfWork;
 
 namespace PizzaService.Controllers
 {
@@ -9,23 +10,23 @@ namespace PizzaService.Controllers
     [ApiController]
     public class PizzaController : ControllerBase
     {
-        private IPizzaService _pizzaService { get; set; }
-        public PizzaController(IPizzaService pizzaService)
+        private readonly IPizzaRepository _pizzaRepository;
+        public PizzaController(IPizzaRepository pizzaRepository)
         {
-            _pizzaService = pizzaService;
+             _pizzaRepository = pizzaRepository;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAllOrders()
         {
-            var pizzas = await _pizzaService.GetAllPizzas();
+            var pizzas = await _pizzaRepository.GetAllPizzas();
             return Ok(pizzas);
         }
 
         [HttpPost]
         public async Task<IActionResult> PlaceOrder(Pizza pizza)
         {
-            await _pizzaService.AddPizza(pizza);
+            await _pizzaRepository.AddPizza(pizza);
             return Ok();
         }
     }

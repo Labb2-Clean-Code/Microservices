@@ -1,7 +1,7 @@
 ﻿using PizzaService.Models;
 using PizzaService.UnifOfWork;
 
-namespace PizzaService.Interfaces
+namespace PizzaService.Services
 {
     public interface IPizzaService
     {
