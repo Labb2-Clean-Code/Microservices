@@ -17,6 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthenticationService", "Au
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderService", "OrderService\OrderService.csproj", "{7AEB7F1B-BA18-4DA2-9E8B-7E5F2E8C3FB0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API-Specifications", "API-Specifications", "{2C52931F-8B0C-4C9C-9ADC-7C1DCC8D05A8}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\OneDrive\Skrivbord\ApiPizzaSpec.png = ..\..\..\OneDrive\Skrivbord\ApiPizzaSpec.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
