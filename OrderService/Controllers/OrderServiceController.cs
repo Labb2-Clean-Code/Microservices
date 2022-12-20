@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using OrderService.Models;
 using OrderService.Services.Interfaces;
 
 namespace OrderService.Controllers {
@@ -20,16 +21,17 @@ namespace OrderService.Controllers {
         }
 
         [HttpGet("/GetAllOrders")]
-        public async Task<IActionResult> GetAllOrders() {
-
-            return await _getAllOrders.GetAllOrders();
-
+        public async Task<IActionResult> GetAllOrders() 
+        {
+            var orders = await _getAllOrders.GetAllOrders();
+            return Ok(orders);
         }
 
         [HttpPost("/AddOrder")]
-        public async Task<IActionResult> AddOrder() {
+        public async Task<IActionResult> AddOrder(Order order) {
 
-            return await _addOrder.AddOrder();
+            await _addOrder.AddOrder(order);
+            return Ok();
 
         }
 
