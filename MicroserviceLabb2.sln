@@ -22,6 +22,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API-Specifications", "API-S
 		..\..\..\OneDrive\Skrivbord\ApiPizzaSpec.png = ..\..\..\OneDrive\Skrivbord\ApiPizzaSpec.png
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService.Test", "OrderService.Test\OrderService.Test.csproj", "{A001B2AB-9A40-4F89-B854-B2FD24E31707}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{7AEB7F1B-BA18-4DA2-9E8B-7E5F2E8C3FB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AEB7F1B-BA18-4DA2-9E8B-7E5F2E8C3FB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AEB7F1B-BA18-4DA2-9E8B-7E5F2E8C3FB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A001B2AB-9A40-4F89-B854-B2FD24E31707}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A001B2AB-9A40-4F89-B854-B2FD24E31707}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A001B2AB-9A40-4F89-B854-B2FD24E31707}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A001B2AB-9A40-4F89-B854-B2FD24E31707}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{9448362E-6D95-4128-8A4E-0D8D017043F0} = {645D8E8B-55B3-4C12-B13B-9B1C6BF65D8F}
 		{57467F47-A45A-4CAB-B9AC-08BB67CAB7EE} = {645D8E8B-55B3-4C12-B13B-9B1C6BF65D8F}
 		{7AEB7F1B-BA18-4DA2-9E8B-7E5F2E8C3FB0} = {D6E893EE-566F-4F95-B2E2-E1EA6A0AEF41}
+		{A001B2AB-9A40-4F89-B854-B2FD24E31707} = {D6E893EE-566F-4F95-B2E2-E1EA6A0AEF41}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {33D8B05C-30EB-4885-8E96-018DF1E4369F}
