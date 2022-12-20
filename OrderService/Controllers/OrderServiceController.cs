@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using OrderService.Models;
-using OrderService.Services.Interfaces;
+using OrderService.Domain;
+using OrderService.Domain.Models;
 
 namespace OrderService.Controllers {
 
@@ -8,30 +8,25 @@ namespace OrderService.Controllers {
     [Route("/order/[controller]")]
     public class OrderServiceController : Controller {
         
-        private readonly IGetAllOrders _getAllOrders;
+        private readonly IOrderRepository orderRepository;
 
-        private readonly IAddOrder _addOrder;
-
-        public OrderServiceController(IGetAllOrders getAllOrders, IAddOrder addOrder) {
-            
-            _getAllOrders = getAllOrders;
-
-            _addOrder = addOrder;
-
+        public OrderServiceController(IOrderRepository orderRepository) 
+        {
+            this.orderRepository = orderRepository;
         }
 
         [HttpGet("/GetAllOrders")]
         public async Task<IActionResult> GetAllOrders() 
         {
-            var orders = await _getAllOrders.GetAllOrders();
+            var orders = await orderRepository.GetAllOrders();
             return Ok(orders);
         }
 
         [HttpPost("/AddOrder")]
         public async Task<IActionResult> AddOrder(Order order) {
 
-            await _addOrder.AddOrder(order);
-            return Ok();
+            var addedOrder = await orderRepository.AddOrder(order);
+            return Ok(addedOrder);
 
         }
 
