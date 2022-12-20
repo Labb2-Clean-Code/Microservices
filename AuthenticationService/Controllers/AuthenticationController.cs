@@ -8,8 +8,8 @@ using System.Text;
 
 namespace AuthenticationService.Controllers
 {
+    [Route("api/[controller]")]
     [ApiController]
-    [Route("[controller]")]
     public class AuthenticationController : ControllerBase
     {
         [HttpGet(Name = "GetAuthToken")]
