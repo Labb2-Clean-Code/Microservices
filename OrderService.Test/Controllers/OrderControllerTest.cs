@@ -2,23 +2,21 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OrderService.Controllers;
-using OrderService.Models;
-using OrderService.Services.Interfaces;
+using OrderService.Domain;
+using OrderService.Domain.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace OrderService.Test.Controllers
 {
     [TestClass]
-    public class OrderServiceControllerTest
+    public class OrderControllerTest
     {
-        private readonly IGetAllOrders _getAllOrders;
-        private readonly IAddOrder _addOrder;
+        private readonly IOrderRepository orderRepository;
 
-        public OrderServiceControllerTest()
+        public OrderControllerTest()
         {
-            _getAllOrders = A.Fake<IGetAllOrders>();
-            _addOrder = A.Fake<IAddOrder>();
+            orderRepository = A.Fake<IOrderRepository>();
         }
 
         [TestMethod]
@@ -26,8 +24,8 @@ namespace OrderService.Test.Controllers
         {
             // Arrange
             var orders = A.Fake<IEnumerable<Order>>();
-            A.CallTo(() => _getAllOrders.GetAllOrders()).Returns(orders);
-            var controller = new OrderServiceController(_getAllOrders, _addOrder);
+            A.CallTo(() => orderRepository.GetAllOrders()).Returns(orders);
+            var controller = new OrderServiceController(orderRepository);
 
             // Act
             var result = await controller.GetAllOrders();
@@ -42,15 +40,15 @@ namespace OrderService.Test.Controllers
         {
             // Arrange
             var order = A.Fake<Order>();
-            A.CallTo(() => _addOrder.AddOrder(order));
-            var controller = new OrderServiceController(_getAllOrders, _addOrder);
+            A.CallTo(() => orderRepository.AddOrder(order));
+            var controller = new OrderServiceController(orderRepository);
 
             // Act
             var result = await controller.AddOrder(order);
 
             // Assert
             Assert.IsNotNull(result);
-            Assert.IsInstanceOfType(result, typeof(OkResult));
+            Assert.IsInstanceOfType(result, typeof(OkObjectResult));
         }
     }
 }
