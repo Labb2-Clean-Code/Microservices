@@ -1,10 +1,4 @@
 ﻿using FakeItEasy;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using PizzaService;
 using PizzaService.Interfaces;
 using PizzaService.Models;
 using PizzaService.Controllers;
@@ -21,10 +15,10 @@ namespace PizzaService.Tests.Controller {
         }
 
         [Fact]
-        public async Task OrderServiceController_GetAllOrders_ReturnsOk() {
+        public async Task PizzaController_GetAllPizzas_ReturnsOk() {
             // Arrange
-            var orders = A.Fake<IEnumerable<Pizza>>();
-            A.CallTo(() => pizzaRepository.GetAllPizzas()).Returns(orders);
+            var pizzas = A.Fake<IEnumerable<Pizza>>();
+            A.CallTo(() => pizzaRepository.GetAllPizzas()).Returns(pizzas);
             var controller = new PizzaController(pizzaRepository);
 
             // Act
@@ -36,10 +30,10 @@ namespace PizzaService.Tests.Controller {
         }
 
         [Fact]
-        public async Task OrderServiceController_AddOrder_ReturnsOk() {
+        public async Task PizzaController_AddPizza_ReturnsOk() {
             // Arrange
             var pizza = A.Fake<Pizza>();
-            A.CallTo((object)(() => pizzaRepository.AddPizza(pizza)));
+            A.CallTo(() => pizzaRepository.AddPizza(pizza));
             var controller = new PizzaController(pizzaRepository);
 
             // Act
@@ -47,7 +41,7 @@ namespace PizzaService.Tests.Controller {
 
             // Assert
             Assert.NotNull(result);
-            result.Should().BeOfType(typeof(OkObjectResult));
+            result.Should().BeOfType(typeof(OkResult));
         }
 
     }
