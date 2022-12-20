@@ -17,7 +17,7 @@ namespace PizzaService.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<List<Pizza>> GetAllPizzas()
+        public Task<IEnumerable<Pizza>> GetAllPizzas()
         {
             throw new NotImplementedException();
         }

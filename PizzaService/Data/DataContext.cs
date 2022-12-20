@@ -7,7 +7,6 @@ namespace PizzaService.Data
 {
     public class DataContext : DbContext
     {
-        public DbSet<Pizza> Pizzas { get; set; }
         public DataContext(DbContextOptions options) : base(options)
         {
             //try
@@ -24,5 +23,6 @@ namespace PizzaService.Data
             //}
 
         }
+        public DbSet<Pizza> Pizzas { get; set; }
     }
 }
