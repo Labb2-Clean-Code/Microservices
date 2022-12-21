@@ -4,7 +4,7 @@ namespace PizzaService.Interfaces
 {
     public interface IPizzaRepository
     {
-        Task<List<Pizza>> GetAllPizzas();
-        Task AddPizza(Pizza pizza);
+        Task<IEnumerable<Pizza>> GetAllPizzas();
+        Task<Pizza> AddPizza(Pizza pizza);
     }
 }

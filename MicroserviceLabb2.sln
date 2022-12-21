@@ -20,6 +20,19 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API-Specifications", "API-Specifications", "{2C52931F-8B0C-4C9C-9ADC-7C1DCC8D05A8}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\..\OneDrive\Skrivbord\ApiPizzaSpec.png = ..\..\..\OneDrive\Skrivbord\ApiPizzaSpec.png
+		..\..\..\..\Pictures\Clean Code Labb 2\OrderService API-specifikation.png = ..\..\..\..\Pictures\Clean Code Labb 2\OrderService API-specifikation.png
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderService.Test", "OrderService.Test\OrderService.Test.csproj", "{A001B2AB-9A40-4F89-B854-B2FD24E31707}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaService.Tests", "PizzaService.Tests\PizzaService.Tests.csproj", "{49A6A9BA-0559-4341-BDB7-7373DAC91024}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PostmanTestsForGateway", "PostmanTestsForGateway", "{96D367A6-CCE7-483A-B769-33463D646D99}"
+	ProjectSection(SolutionItems) = preProject
+		GetPizzaTest.js = GetPizzaTest.js
+		GetOrderTest.js = GetOrderTest.js
+		PostOrderTest.js = PostOrderTest.js
+		PostPizzaTest.js = PostPizzaTest.js
 	EndProjectSection
 EndProject
 Global
@@ -44,6 +57,14 @@ Global
 		{7AEB7F1B-BA18-4DA2-9E8B-7E5F2E8C3FB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AEB7F1B-BA18-4DA2-9E8B-7E5F2E8C3FB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AEB7F1B-BA18-4DA2-9E8B-7E5F2E8C3FB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A001B2AB-9A40-4F89-B854-B2FD24E31707}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A001B2AB-9A40-4F89-B854-B2FD24E31707}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A001B2AB-9A40-4F89-B854-B2FD24E31707}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A001B2AB-9A40-4F89-B854-B2FD24E31707}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49A6A9BA-0559-4341-BDB7-7373DAC91024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49A6A9BA-0559-4341-BDB7-7373DAC91024}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49A6A9BA-0559-4341-BDB7-7373DAC91024}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49A6A9BA-0559-4341-BDB7-7373DAC91024}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +74,8 @@ Global
 		{9448362E-6D95-4128-8A4E-0D8D017043F0} = {645D8E8B-55B3-4C12-B13B-9B1C6BF65D8F}
 		{57467F47-A45A-4CAB-B9AC-08BB67CAB7EE} = {645D8E8B-55B3-4C12-B13B-9B1C6BF65D8F}
 		{7AEB7F1B-BA18-4DA2-9E8B-7E5F2E8C3FB0} = {D6E893EE-566F-4F95-B2E2-E1EA6A0AEF41}
+		{A001B2AB-9A40-4F89-B854-B2FD24E31707} = {D6E893EE-566F-4F95-B2E2-E1EA6A0AEF41}
+		{49A6A9BA-0559-4341-BDB7-7373DAC91024} = {B9111D13-0D43-4B3E-B97C-DA102C3B2958}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {33D8B05C-30EB-4885-8E96-018DF1E4369F}

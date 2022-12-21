@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using OrderService.DataContext;
-using OrderService.Services.Classes;
-using OrderService.Services.Interfaces;
+using OrderService.Data;
+using OrderService.Data.Repositories;
+using OrderService.Domain;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,8 +19,7 @@ builder.Services.AddDbContext<DataContext>(options => {
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<IGetAllOrders, GetAllOrders>();
-builder.Services.AddScoped<IAddOrder, AddOrder>();
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 
 var app = builder.Build();
 

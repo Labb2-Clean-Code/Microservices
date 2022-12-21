@@ -6,7 +6,7 @@
     {
       "UpstreamPathTemplate": "/gateway/auth",
       "UpstreamHttpMethod": [ "Get" ],
-      "DownstreamPathTemplate": "/Authentication",
+      "DownstreamPathTemplate": "/api/Authentication",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -17,13 +17,13 @@
     },
     {
       "UpstreamPathTemplate": "/gateway/pizza",
-      "UpstreamHttpMethod": [ "Get" ],
-      "DownstreamPathTemplate": "/Test",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/pizza",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7137
+          "Port": 7212
         }
       ],
       "AuthenticationOptions": {
@@ -35,28 +35,47 @@
       }
     },
     {
-      "UpstreamPathTemplate": "/gateway/order",
+      "UpstreamPathTemplate": "/gateway/pizza",
       "UpstreamHttpMethod": [ "Get" ],
-      "DownstreamPathTemplate": "/api/order",
-      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/pizza",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5002
+          "Port": 7212
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/order",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/GetAllOrders",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7190
         }
       ]
     },
     {
       "UpstreamPathTemplate": "/gateway/order",
       "UpstreamHttpMethod": [ "Post" ],
-      "DownstreamPathTemplate": "/api/order",
-      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/AddOrder",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5002
+          "Port": 7190
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin"
+      }
     }
   ]
 }

@@ -1,4 +1,5 @@
-﻿using PizzaService.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using PizzaService.Data;
 using PizzaService.Interfaces;
 using PizzaService.Models;
 
@@ -12,14 +13,23 @@ namespace PizzaService.Repositories
             _dataContext = dataContext;
         }
 
-        public Task AddPizza(Pizza pizza)
+        public async Task<Pizza> AddPizza(Pizza pizza)
         {
-            throw new NotImplementedException();
+            var found = await _dataContext.Pizzas.FirstOrDefaultAsync(p => p.Id == pizza.Id);
+            if (found is not null)
+            {
+                throw new Exception();
+            }
+            await _dataContext.AddAsync(pizza);
+            await _dataContext.SaveChangesAsync();
+            return pizza;
         }
 
-        public Task<List<Pizza>> GetAllPizzas()
+        public async Task<IEnumerable<Pizza>> GetAllPizzas()
         {
-            throw new NotImplementedException();
+            return await _dataContext.Pizzas.ToListAsync();
         }
+
+
     }
 }
