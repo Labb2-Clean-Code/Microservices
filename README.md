@@ -2,7 +2,7 @@
 Allt du behöver göra för att kunna köra solutionen är att ställa in alla Services och gatewayen som start projekt samt att köra "Update-Database" i PMC för 
 både OrderService och PizzaService.
 
-## Tester i Postman
+### Tester i Postman
 Alla tester för gatewayen har gjorts i postman. Testerna för varje endpoind ligger separerat i projektets .js filer. Kopiera in innehållet i postman för att testa dem.
 Sen hittar du Api-Specifikationerna nedan:
 <h1>Pizza Service<h1/>
