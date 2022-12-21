@@ -13,20 +13,23 @@ namespace PizzaService.Repositories
             _dataContext = dataContext;
         }
 
-        public async Task AddPizza(Pizza pizza)
+        public async Task<Pizza> AddPizza(Pizza pizza)
         {
-            var found = await _dataContext.Pizzas.FirstOrDefaultAsync(p => p.Name == pizza.Name);
+            var found = await _dataContext.Pizzas.FirstOrDefaultAsync(p => p.Id == pizza.Id);
             if (found is not null)
             {
                 throw new Exception();
             }
             await _dataContext.AddAsync(pizza);
             await _dataContext.SaveChangesAsync();
+            return pizza;
         }
 
         public async Task<IEnumerable<Pizza>> GetAllPizzas()
         {
             return await _dataContext.Pizzas.ToListAsync();
         }
+
+
     }
 }
