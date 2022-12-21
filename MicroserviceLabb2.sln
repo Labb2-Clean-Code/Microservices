@@ -23,9 +23,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API-Specifications", "API-S
 		..\..\..\..\Pictures\Clean Code Labb 2\OrderService API-specifikation.png = ..\..\..\..\Pictures\Clean Code Labb 2\OrderService API-specifikation.png
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService.Test", "OrderService.Test\OrderService.Test.csproj", "{A001B2AB-9A40-4F89-B854-B2FD24E31707}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderService.Test", "OrderService.Test\OrderService.Test.csproj", "{A001B2AB-9A40-4F89-B854-B2FD24E31707}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaService.Tests", "PizzaService.Tests\PizzaService.Tests.csproj", "{49A6A9BA-0559-4341-BDB7-7373DAC91024}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaService.Tests", "PizzaService.Tests\PizzaService.Tests.csproj", "{49A6A9BA-0559-4341-BDB7-7373DAC91024}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PostmanTestsForGateway", "PostmanTestsForGateway", "{96D367A6-CCE7-483A-B769-33463D646D99}"
+	ProjectSection(SolutionItems) = preProject
+		GetPizzaTest.js = GetPizzaTest.js
+		GetOrderTest.js = GetOrderTest.js
+		PostOrderTest.js = PostOrderTest.js
+		PostPizzaTest.js = PostPizzaTest.js
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
