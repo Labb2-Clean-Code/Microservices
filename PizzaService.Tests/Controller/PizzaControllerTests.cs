@@ -15,6 +15,7 @@ namespace PizzaService.Tests.Controller {
         }
 
         [Fact]
+        [Trait("PizzaService", "GetAllPizzasFromController")]
         public async Task PizzaController_GetAllPizzas_ReturnsOk() {
             // Arrange
             var pizzas = A.Fake<IEnumerable<Pizza>>();
@@ -30,6 +31,7 @@ namespace PizzaService.Tests.Controller {
         }
 
         [Fact]
+        [Trait("PizzaService", "AddPizzaThroughController")]
         public async Task PizzaController_AddPizza_ReturnsOk() {
             // Arrange
             var pizza = A.Fake<Pizza>();

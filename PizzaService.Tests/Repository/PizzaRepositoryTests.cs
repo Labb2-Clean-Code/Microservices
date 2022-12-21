@@ -29,6 +29,7 @@ namespace PizzaService.Tests.Repository {
         }
 
         [Fact]
+        [Trait("PizzaService", "GetAllPizzasFromInMemoryDatabase")]
         public async Task PizzaRepository_GetAllPizzas_ReturnsListOfPizzas() {
             // Arrange
             var dbContext = await GetDatabaseContext();
@@ -41,7 +42,8 @@ namespace PizzaService.Tests.Repository {
         }
 
         [Fact]
-        public async Task PizzaRepository_AddPizza_AddsToTheInMemoryDatabase() {
+        [Trait("PizzaService", "AddPizzaToInMemoryDatabase")]
+        public async Task PizzaRepository_AddPizza_AddsPizzaToTheInMemoryDatabase() {
             // Arrange
             var pizza = new Pizza {
                 Id = 2, Name = "Kebabpizza", Ingredients = "Kebabkött, Kebabsås, Feferoni, Ost, Tomatsås", Price = 95
