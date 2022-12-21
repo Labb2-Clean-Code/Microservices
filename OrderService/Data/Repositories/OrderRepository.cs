@@ -26,7 +26,7 @@ namespace OrderService.Data.Repositories
 
         public async Task<IEnumerable<Order>> GetAllOrders()
         {
-            return await _dataContext.Orders.ToListAsync();
+            return await _dataContext.Orders.Include(x => x.Products).ToListAsync();
         }
     }
 }
