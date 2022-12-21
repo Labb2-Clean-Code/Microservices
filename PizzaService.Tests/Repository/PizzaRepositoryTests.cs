@@ -38,7 +38,7 @@ namespace PizzaService.Tests.Repository {
             var result = await pizzaRepository.GetAllPizzas();
             // Assert
             Assert.NotNull(result);
-            result.Should().BeOfType(typeof(IEnumerable<Pizza>));
+            result.Should().BeOfType(typeof(List<Pizza>));
         }
 
         [Fact]
@@ -51,7 +51,7 @@ namespace PizzaService.Tests.Repository {
             var dbContext = await GetDatabaseContext();
             var pizzaRepository = new PizzaRepository(dbContext);
             // Act
-            var result = pizzaRepository.AddPizza(pizza);
+            var result = await pizzaRepository.AddPizza(pizza);
             // Assert
             Assert.NotNull(result);
             result.Should().BeOfType(typeof(Pizza));

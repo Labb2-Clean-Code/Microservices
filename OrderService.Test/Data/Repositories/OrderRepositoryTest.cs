@@ -30,8 +30,6 @@ namespace OrderService.Test.Data.Repositories
                             new Product
                             {
                                 Id = 1,
-                                Name = "Test",
-                                Price = 1,
                             }
                         }
                     }
@@ -62,7 +60,7 @@ namespace OrderService.Test.Data.Repositories
             {
                 Products = new List<Product>
                 {
-                    new Product { Id = 2, Name = "Test2", Price = 2 }
+                    new Product { Id = 2 }
                 }
             };
             var dbContext = await GetDatabaseContext();
